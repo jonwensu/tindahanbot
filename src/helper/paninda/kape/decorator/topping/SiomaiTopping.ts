@@ -5,7 +5,7 @@ import ToppingDecorator from "./ToppingDecorator";
 import { getImage } from "../../../../../util/CacheUtil";
 
 const IMG_URL =
-  "https://cdn.discordapp.com/attachments/765047137473265714/903632997696294942/siomai.png";
+  "https://cdn.discordapp.com/attachments/765047137473265714/903632997696294942/siomai.png?ex=66ef6f8f&is=66ee1e0f&hm=19b9233e8136b5c43d3ce1937338507b83fbd5ecac76e07908faf44644e66004&";
 
 export default class SiomaiTopping extends ToppingDecorator {
   constructor(kape: IKape) {
@@ -72,7 +72,7 @@ export default class SiomaiTopping extends ToppingDecorator {
           doRollRange(x1, x1 + dimensions.width - toppingWidth),
           y + jitter.y,
           toppingWidth,
-          toppingHeight
+          toppingHeight,
         );
         ctx.restore();
       });

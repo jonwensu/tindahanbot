@@ -39,7 +39,7 @@ export default class KapePaninda extends Paninda {
 
   successSpiel = async (
     user: User,
-    member: GuildMember
+    member: GuildMember,
   ): Promise<InteractionReplyOptions> => {
     const Container = pick([Mug]);
     const Size = pick([Tall, Grande, Venti]);
@@ -86,7 +86,7 @@ export default class KapePaninda extends Paninda {
     });
     const toppings = resolveString(
       out.getToppings()?.name,
-      (v) => `and ${bold(v)} on top`
+      (v) => `and ${bold(v)} on top`,
     );
 
     await out.render();
@@ -104,7 +104,7 @@ export default class KapePaninda extends Paninda {
       .setDescription(message)
       .setFooter(
         `Kape ni ${member.displayName}`,
-        user.displayAvatarURL({ size: 256 })
+        user.displayAvatarURL({ size: 256 }),
       )
       .setImage(`attachment://${filename}`);
 

@@ -35,7 +35,7 @@ type KissType = {
 const KISS_IMG: KissType = {
   kith: {
     image: {
-      url: `https://media.discordapp.net/attachments/820193847618961438/833318912861929502/hqdefault.png`,
+      url: `https://cdn.discordapp.com/attachments/765047137473265714/809791992845697096/hqdefault.png?ex=66ef7fd0&is=66ee2e50&hm=90d540510561a3401b8c2bd9138fb942bc5db187947cc619a23d409e038f43f8&`,
       width: 480,
       height: 360,
     },
@@ -66,7 +66,7 @@ const KISS_IMG: KissType = {
   },
   kiss: {
     image: {
-      url: `https://media.discordapp.net/attachments/820193847618961438/833318935029219328/iu.png`,
+      url: `https://cdn.discordapp.com/attachments/765047137473265714/809808983665279017/iu.png?ex=66ef8fa3&is=66ee3e23&hm=98247a30c089a6afe573e938a240d37ed90d4367b95cdf0926cd631e6b0b5209&`,
       width: 750,
       height: 585,
     },
@@ -150,10 +150,10 @@ export default CommandBuilder.build({
     const ctx = canvas.getContext("2d");
     const background = await getImage(image.url);
     const firstTargetAvatar = await getImage(
-      firstTarget.displayAvatarURL({ format: "png", size: 128 })
+      firstTarget.displayAvatarURL({ format: "png", size: 128 }),
     );
     const secondTargetAvatar = await getImage(
-      secondTarget.displayAvatarURL({ format: "png", size: 128 })
+      secondTarget.displayAvatarURL({ format: "png", size: 128 }),
     );
 
     const target1Coords = avatar.target1.coordinates(image.width, image.height);
@@ -177,7 +177,7 @@ export default CommandBuilder.build({
       t1Width * 0.5,
       0,
       Math.PI * 2,
-      true
+      true,
     );
     ctx.arc(
       t2x + t2Width * 0.5,
@@ -185,7 +185,7 @@ export default CommandBuilder.build({
       t2Width * 0.5,
       0,
       Math.PI * 2,
-      true
+      true,
     );
     ctx.closePath();
     ctx.clip();
@@ -195,14 +195,14 @@ export default CommandBuilder.build({
       target1Coords.x,
       target1Coords.y,
       avatar.target1.dimensions.width,
-      avatar.target1.dimensions.height
+      avatar.target1.dimensions.height,
     );
     ctx.drawImage(
       secondTargetAvatar,
       target2Coords.x,
       target2Coords.y,
       avatar.target2.dimensions.width,
-      avatar.target2.dimensions.height
+      avatar.target2.dimensions.height,
     );
 
     const attachment = new MessageAttachment(canvas.toBuffer(), "kiss.png");

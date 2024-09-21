@@ -10,7 +10,7 @@ type Bounds = {
     [number, number],
     [number, number],
     [number, number],
-    [number, number]
+    [number, number],
   ];
 };
 
@@ -20,7 +20,7 @@ export default abstract class BeverageContainer {
   constructor(
     context: NodeCanvasRenderingContext2D,
     url: string,
-    size: BeverageSize
+    size: BeverageSize,
   ) {
     this._url = url;
     this._context = context;

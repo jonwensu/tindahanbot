@@ -5,7 +5,7 @@ import ToppingDecorator from "./ToppingDecorator";
 import { getImage } from "../../../../../util/CacheUtil";
 
 const IMG_URL =
-  "https://cdn.discordapp.com/attachments/765047137473265714/901787870610747412/777869567158255636.png";
+  "https://cdn.discordapp.com/attachments/765047137473265714/901787870610747412/777869567158255636.png?ex=66ef50a6&is=66edff26&hm=2d52a6d424b8cff1ea532cfb9ba62e6767c62508d5a4b45689a0d677ae5de017&";
 
 export default class PotchiTopping extends ToppingDecorator {
   constructor(kape: IKape) {
@@ -69,7 +69,7 @@ export default class PotchiTopping extends ToppingDecorator {
           doRollRange(x1, x1 + dimensions.width - toppingWidth),
           y + jitter.y,
           toppingWidth,
-          toppingHeight
+          toppingHeight,
         );
         ctx.restore();
       });

@@ -3,7 +3,7 @@ import UserImageEntry from "../image/UserImageEntry";
 import ImageBuilder from "../image/ImageBuilder";
 import BaseKurotTemplate from "./BaseKurotTemplate";
 
-const BG_URL = `https://media.discordapp.net/attachments/820193847618961438/833319025462870076/SPOILER_FqtqF4SW_fAbKmWMNeOxjw2Fcustom-Custom_Size___ScreenShot2019-07-10at3.png`;
+const BG_URL = `https://cdn.discordapp.com/attachments/765047137473265714/810809483189552164/SPOILER_FqtqF4SW_fAbKmWMNeOxjw2Fcustom-Custom_Size___ScreenShot2019-07-10at3.png?ex=66ef3eec&is=66eded6c&hm=3b592fb90875c6477eb99cb9f31456e596c25c3b14e063a982f053dcd247c547&`;
 export default class NsfwKurotTemplate extends BaseKurotTemplate {
   constructor(target: User) {
     super(target, true);
@@ -21,7 +21,7 @@ export default class NsfwKurotTemplate extends BaseKurotTemplate {
     const builder = new ImageBuilder(
       { width: 750, height: 412 },
       [authorImg, targetImg],
-      BG_URL
+      BG_URL,
     );
 
     const attachment = await builder.render();

@@ -17,7 +17,7 @@ export default abstract class BaseKape implements IKape {
     context: NodeCanvasRenderingContext2D,
     name: string,
     container: BeverageContainer,
-    baseColor: string
+    baseColor: string,
   ) {
     this._name = name;
     this._baseColor = Color(baseColor);

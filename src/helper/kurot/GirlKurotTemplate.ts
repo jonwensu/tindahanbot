@@ -3,7 +3,7 @@ import UserImageEntry from "../image/UserImageEntry";
 import ImageBuilder from "../image/ImageBuilder";
 import BaseKurotTemplate from "./BaseKurotTemplate";
 
-const BG_URL = `https://media.discordapp.net/attachments/820193847618961438/833319109563252736/31982191-siem-reap-camboya-04-de-diciembre-de-2012-niC3B1a-pellizcando-la-oreja-de-su-amiga-cerca-de.png`;
+const BG_URL = `https://cdn.discordapp.com/attachments/765047137473265714/810919064998248458/31982191-siem-reap-camboya-04-de-diciembre-de-2012-niC3B1a-pellizcando-la-oreja-de-su-amiga-cerca-de.png?ex=66efa4fb&is=66ee537b&hm=953728dec0bb55a31b66b5d99241a428809f3ce92d8a05fce5988d3b704e6e90&`;
 
 export default class GirlKurotTemplate extends BaseKurotTemplate {
   async render(user: User): Promise<MessageAttachment> {
@@ -19,7 +19,7 @@ export default class GirlKurotTemplate extends BaseKurotTemplate {
     const builder = new ImageBuilder(
       { width: 450, height: 300 },
       [authorImg, targetImg],
-      BG_URL
+      BG_URL,
     );
 
     const attachment = await builder.render();

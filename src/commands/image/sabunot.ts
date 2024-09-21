@@ -4,7 +4,7 @@ import CommandGroup from "../../enums/CommandGroup";
 import CommandBuilder from "../../helper/CommandBuilder";
 import { getImage } from "../../util/CacheUtil";
 
-const SABUNOT_IMG = `https://media.discordapp.net/attachments/820193847618961438/833318254599471134/Screen-Shot-2018-06-06-at-2.png`;
+const SABUNOT_IMG = `https://cdn.discordapp.com/attachments/765047137473265714/769803669875982366/Screen-Shot-2018-06-06-at-2.png?ex=66efb389&is=66ee6209&hm=ba5bb5cc29b9e6102d795553ef3fd8d35c79232bb9358d85623daa204d30bc52&`;
 
 const WIDTH = 640;
 const HEIGHT = 420;
@@ -41,7 +41,7 @@ export default CommandBuilder.build({
     const targetId = args[0];
 
     const target = guild?.members.cache.find(
-      ({ user }) => user.id === targetId
+      ({ user }) => user.id === targetId,
     );
 
     if (!target) return "Provide a target";
@@ -50,10 +50,10 @@ export default CommandBuilder.build({
     const ctx = canvas.getContext("2d");
     const background = await getImage(SABUNOT_IMG);
     const sabunoterAvatar = await getImage(
-      user.displayAvatarURL({ format: "png" })
+      user.displayAvatarURL({ format: "png" }),
     );
     const sabunoteeAvatar = await getImage(
-      target.displayAvatarURL({ format: "png" })
+      target.displayAvatarURL({ format: "png" }),
     );
 
     const sabunoterDim = sabunoter(WIDTH, HEIGHT);
@@ -71,7 +71,7 @@ export default CommandBuilder.build({
       AVATAR_W * 0.5,
       0,
       Math.PI * 2,
-      true
+      true,
     );
     ctx.save();
     ctx.rotate((-30 * Math.PI) / 180);
@@ -81,7 +81,7 @@ export default CommandBuilder.build({
       SABUNOTEE_W * 0.5,
       0,
       Math.PI * 2,
-      true
+      true,
     );
     ctx.restore();
     ctx.closePath();
@@ -92,7 +92,7 @@ export default CommandBuilder.build({
       sabunoterDim.x,
       sabunoterDim.y,
       AVATAR_W,
-      AVATAR_H
+      AVATAR_H,
     );
 
     ctx.save();
@@ -102,7 +102,7 @@ export default CommandBuilder.build({
       sabunoteeDim.x,
       sabunoteeDim.y,
       SABUNOTEE_W,
-      SABUNOTEE_H
+      SABUNOTEE_H,
     );
 
     ctx.restore();

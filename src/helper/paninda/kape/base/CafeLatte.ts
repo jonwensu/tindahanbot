@@ -5,7 +5,7 @@ import BeverageContainer from "../container/BeverageContainer";
 import BaseKape from "./BaseKape";
 
 const HEART_URL =
-  "https://cdn.discordapp.com/attachments/765047137473265714/901466068021837824/brown_heart1.png";
+  "https://cdn.discordapp.com/attachments/765047137473265714/901466068021837824/brown_heart1.png?ex=66ef7673&is=66ee24f3&hm=1e51a45b784fd0bf84828baaa686773c55a5db1fd33c195d68ff8a43885265d2&";
 
 export default class CafeLatte extends BaseKape {
   constructor(ctx: NodeCanvasRenderingContext2D, container: BeverageContainer) {
@@ -50,7 +50,7 @@ export default class CafeLatte extends BaseKape {
       x1 + +(width - heartWidth) * 0.5,
       fy1 + padding.y,
       heartWidth,
-      heartHeight
+      heartHeight,
     );
   }
 
@@ -58,7 +58,7 @@ export default class CafeLatte extends BaseKape {
     x: number,
     y: number,
     width: number,
-    height: number
+    height: number,
   ): Promise<void> {
     const heart = await getImage(HEART_URL);
 

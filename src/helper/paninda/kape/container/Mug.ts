@@ -4,7 +4,7 @@ import BeverageContainer from "./BeverageContainer";
 import BeverageSize from "./size/BeverageSize";
 
 const BG_IMG =
-  "https://media.discordapp.net/attachments/765047137473265714/901368924363423754/Kj_LcQHli99OUGELfHF9kMXgrGkaPUBZ0JyRS2NVzQFF8ieWn93bXN1vYoDRJGNWadr34naBvH25jfEehIBWa4vu3MwT4nStGzW6Kao0X3tbh2H0WH3cZ5a2pdp_nBNnEkPD-Htk1XslYJIug2k.png";
+  "https://cdn.discordapp.com/attachments/765047137473265714/985127274183553094/mug.png?ex=66ef4784&is=66edf604&hm=0602dc6b5833184a06bb3f25a7f3ccc2813defce61064ba35475606043408b58&";
 
 export default class Mug extends BeverageContainer {
   constructor(context: NodeCanvasRenderingContext2D, size: BeverageSize) {
@@ -28,13 +28,13 @@ export default class Mug extends BeverageContainer {
   public get trimmedDimensions(): Dimensions {
     const { width, height } = this.dimensions;
     return {
-      width: width * 0.57,
-      height: height * 0.73,
+      width: width * 0.66,
+      height: height * 0.77,
     };
   }
 
   public get margin(): Coordinates {
     const { width: containerWidth, height: containerHeight } = this.dimensions;
-    return { x: containerWidth * 0.15, y: containerHeight * 0.13 };
+    return { x: containerWidth * 0.02, y: containerHeight * 0.13 };
   }
 }
